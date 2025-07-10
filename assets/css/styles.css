@@ -1,0 +1,158 @@
+/* =======================
+    SOCIAL NETWORK LINKS HEADER
+==========================*/
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; /* Puedes ajustar el ancho según tus preferencias */
+  height: 64px; /* Ajusta la altura según tus preferencias */
+  border-radius: 50%; /* Hace que el contenedor sea un círculo */
+  margin-right: 10px; /* Ajusta el margen según tus preferencias */
+  background-color: #fff; /* Color de fondo del círculo */
+}
+
+.social-links a i {
+  font-size: 20px; /* Tamaño del ícono dentro del círculo */
+}
+
+.breadcrumbs .whatsapp {
+  background: #fff;
+}
+.breadcrumbs .whatsapp:hover {
+  background: #8cbd3f;
+}
+.breadcrumbs .whatsapp:hover i {
+  color: #fff;
+}
+.breadcrumbs .whatsapp i {
+  color: #8cbd3f;
+}
+
+.breadcrumbs .facebook {
+  background: #fff;
+}
+.breadcrumbs .facebook:hover {
+  background: #3b5998;
+}
+.breadcrumbs .facebook:hover i {
+  color: #fff;
+}
+.breadcrumbs .facebook i {
+  color: #3b5998;
+}
+
+.breadcrumbs .instagram {
+  background: #fff;
+}
+.breadcrumbs .instagram:hover {
+  background: #C13584;
+}
+.breadcrumbs .instagram:hover i {
+  color: #fff;
+}
+.breadcrumbs .instagram i {
+  color: #C13584;
+}
+
+.breadcrumbs .telephone-fill {
+  background: #fff;
+}
+.breadcrumbs .telephone-fill:hover {
+  background: #0060c0;
+}
+.breadcrumbs .telephone-fill:hover i {
+  color: #fff;
+}
+.breadcrumbs .telephone-fill i {
+  color: #0060c0;
+}
+
+/* =======================
+    SOCIAL NETWORK LINKS FOOTER
+==========================*/
+.footer .whatsapp {
+  background: #fff;
+}
+.footer .whatsapp:hover {
+  background: #8cbd3f;
+}
+.footer .whatsapp:hover i {
+  color: #fff;
+}
+.footer .whatsapp i {
+  color: #8cbd3f;
+}
+
+
+.footer .facebook {
+  background: #fff;
+}
+.footer .facebook:hover {
+  background: #3b5998;
+}
+.footer .facebook:hover i {
+  color: #fff;
+}
+.footer .facebook i {
+  color: #3b5998;
+}
+
+
+.footer .instagram {
+  background: #fff;
+}
+.footer .instagram:hover {
+  background: #C13584;
+}
+.footer .instagram:hover i {
+  color: #fff;
+}
+.footer .instagram i {
+  color: #C13584;
+}
+
+
+.footer .telephone-fill {
+  background: #fff;
+}
+.footer .telephone-fill:hover {
+  background: #0060c0;
+}
+.footer .telephone-fill:hover i {
+  color: #fff;
+}
+.footer .telephone-fill i {
+  color: #0060c0;
+}
+
+
+
+.nolink {
+  color: inherit;
+  text-decoration: none;
+}
+.space {
+  margin-right: 5px;
+}
+
+.bi-whatsapp {
+  font-size: 64px;
+}
+
+/* #get-a-quote {
+  background-color: #8cbd3f;
+} */
+
+#get-a-quote {
+  background-color: #8cbd3f;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#get-a-quote:hover {
+  background-color: #0D42FFCC;
+  transform: scale(1.03);
+  cursor: pointer;
+}
