@@ -43,6 +43,6 @@ Para más información sobre nuestros servicios logísticos y de transporte:
 - **Nombre del Autor:** [Osvaldo Del Rosario](mailto:DaleRD.com@gmail.com)  
 - **Sitio Web:** [www.transporte.dalerd.com](https://transporte.dalerd.com)  
 - **WhatsApp:** [(809) 433-0002](https://wa.me/18094330002)  
-- **Teléfono:** [(809) 433-0002](tel:8094330002)  
+- **Teléfono:** [(809) 433-0002](https://wa.me/18094330002) 
 - **Instagram:** [@DaleRD.com_](https://instagram.com/DaleRD.com_)  
 - **GitHub:** [github.com/OsvaldoDelR](https://github.com/OsvaldoDelR)
