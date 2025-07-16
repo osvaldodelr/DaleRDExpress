@@ -305,7 +305,7 @@ section {
   font-weight: 700;
   color: #8cbd3f;
   font-family: var(--font-primary);
-  /*white-space: nowrap;*/
+  white-space: nowrap;
 }
 
 /*--------------------------------------------------------------
