@@ -300,6 +300,7 @@ section {
 }
 
 .header .logo h1 {
+  max-width: 300px;
   font-size: 30px;
   margin: 0;
   font-weight: 700;
