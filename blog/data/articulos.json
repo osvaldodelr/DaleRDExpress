@@ -1,0 +1,305 @@
+[
+  {
+    "id": "demo-articulo-01",
+    "titulo": "Título de ejemplo 01",
+    "resumen": "Resumen breve del artículo 01…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-14",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-02",
+    "titulo": "Título de ejemplo 02",
+    "resumen": "Resumen breve del artículo 02…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-13",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-03",
+    "titulo": "Título de ejemplo 03",
+    "resumen": "Resumen breve del artículo 03…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-12",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Otra Categoría",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-04",
+    "titulo": "Título de ejemplo 04",
+    "resumen": "Resumen breve del artículo 04…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-11",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-05",
+    "titulo": "Título de ejemplo 05",
+    "resumen": "Resumen breve del artículo 05…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-10",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo",
+      "extra"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-06",
+    "titulo": "Título de ejemplo 06",
+    "resumen": "Resumen breve del artículo 06…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-09",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Otra Categoría",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-07",
+    "titulo": "Título de ejemplo 07",
+    "resumen": "Resumen breve del artículo 07…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-08",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-08",
+    "titulo": "Título de ejemplo 08",
+    "resumen": "Resumen breve del artículo 08…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-07",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-09",
+    "titulo": "Título de ejemplo 09",
+    "resumen": "Resumen breve del artículo 09…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-06",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Otra Categoría",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-10",
+    "titulo": "Título de ejemplo 10",
+    "resumen": "Resumen breve del artículo 10…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-05",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo",
+      "extra"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-11",
+    "titulo": "Título de ejemplo 11",
+    "resumen": "Resumen breve del artículo 11…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-04",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-12",
+    "titulo": "Título de ejemplo 12",
+    "resumen": "Resumen breve del artículo 12…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-03",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Otra Categoría",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-13",
+    "titulo": "Título de ejemplo 13",
+    "resumen": "Resumen breve del artículo 13…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-02",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-14",
+    "titulo": "Título de ejemplo 14",
+    "resumen": "Resumen breve del artículo 14…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-07-01",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo"
+    ],
+    "categoria": "Categoría Demo",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  },
+  {
+    "id": "demo-articulo-15",
+    "titulo": "Título de ejemplo 15",
+    "resumen": "Resumen breve del artículo 15…",
+    "contenido": "<p>Contenido completo <strong>HTML</strong> de ejemplo…</p>",
+    "fecha": "2025-06-30",
+    "autor": "Autor Demo",
+    "etiquetas": [
+      "demo",
+      "ejemplo",
+      "extra"
+    ],
+    "categoria": "Otra Categoría",
+    "imagen": "assets/img/demo01.jpg",
+    "fuentes": [
+      {
+        "titulo": "Fuente A",
+        "url": "https://ejemplo.com/a"
+      }
+    ]
+  }
+]
