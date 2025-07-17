@@ -73,22 +73,13 @@ function renderizarLista(arr){
   const cont = document.getElementById('lista-articulos');
   cont.innerHTML = '';
   arr.forEach(a=>{
-    const card = document.createElement('article');
-    card.className = 'ui-card ui-card--clickable ui-card--scale-on-hover';
-    
-    // Agregar evento de click para navegar al artículo
-    card.addEventListener('click', () => {
-      window.location.href = `articulo.html?id=${encodeURIComponent(a.id)}`;
-    });
-    
-    card.innerHTML = `
-      <img src="../${a.imagen}" alt="${a.titulo}" data-class="atomic-ui-card-hover-element">
-      <div class="content">
-        <h2><a href="articulo.html?id=${encodeURIComponent(a.id)}">${a.titulo}</a></h2>
-        <p>${a.resumen}</p>
-        <small>${a.fecha} · ${a.autor}</small>
-      </div>
-    `;
+    const card=document.createElement('article');
+    card.className='card';
+    card.innerHTML=`
+      <img src="../${a.imagen}" alt="">
+      <h2><a href="articulo.html?id=${encodeURIComponent(a.id)}">${a.titulo}</a></h2>
+      <p>${a.resumen}</p>
+      <small>${a.fecha} · ${a.autor}</small>`;
     cont.appendChild(card);
   });
 }

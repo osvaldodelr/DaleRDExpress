@@ -1,0 +1,403 @@
+/* ───── VARIABLES Y BASE ───── */
+:root{
+  --max-w:72rem;          /* 1152 px = 72 rem */
+  --pad-s:1rem;           /* 16 px  */
+  --pad-m:1.5rem;         /* 24 px  */
+  --bg-1:#13161c;         /* fondo principal */
+  --bg-2:#1b1e25;         /* fondo tarjetas / modal */
+  --fg-1:#c4c8ce;         /* texto principal */
+  --fg-2:#8cbd3f;         /* acento (h1 / enlaces) */
+  --radius:8px;
+  --font-main:"IBM Plex Sans",sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg-1);
+  color:var(--fg-1);
+  font-family:var(--font-main);
+  line-height:1.5;
+}
+a{color:var(--fg-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1{font-size:1.75rem;color:var(--fg-2)}
+
+
+
+
+
+/* ───── ESTILOS GENERALES ───── */
+#lista-articulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1rem
+}
+
+.card {
+  background: var(--fg-1);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0
+}
+
+.card p {
+  flex: 1
+}
+
+#paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem
+}
+
+#paginacion button {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer
+}
+
+#paginacion button.activo {
+  background: var(--fg-2);
+  color: var(--fg-1)
+}
+
+#filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--fg-1)
+}
+
+#f-etiquetas button {
+  margin: 0 0.25rem 0.25rem 0;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  background: var(--fg-1);
+  cursor: pointer
+}
+
+#f-etiquetas button.activo {
+  background: var(--fg-2);
+  color: var(--fg-1);
+}
+
+@media(prefers-color-scheme:dark) {
+  body {
+    background: var(--bg-1);
+    color: var(--fg-1);
+  }
+
+  header,
+  footer {
+    background: var(--bg-1);
+  }
+
+  .card {
+    background: var(--bg-2);
+  }
+
+  #filtros {
+    background: var(--bg-1);
+  }
+}
+
+
+
+
+
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-contenido h2 {
+  margin-top: 0;
+}
+
+@media(prefers-color-scheme: dark) {
+  .modal-contenido {
+    background: var(--bg-1);
+    color: #eee;
+  }
+}
+
+
+/*====================================*/
+    /*ESTILOS CREADOS POR CHATGPT*/
+/*====================================*/
+
+
+
+
+
+/* ───── CONTENEDOR GLOBAL Y PADDINGS RESPONSIVE ───── */
+header,#filtros,main,nav#paginacion{
+  width:100%;
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding-inline:var(--pad-s);
+}
+@media(min-width:48rem){       /* ≥768 px */
+  header,#filtros,main,nav#paginacion{padding-inline:var(--pad-m)}
+}
+@media(min-width:73.75rem){    /* ≥1180 px */
+  header,#filtros,main,nav#paginacion{padding-inline:0}
+}
+
+
+
+/* ───── ENCABEZADO ───── */
+header{
+  height:3.75rem;              /* 60 px */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--bg-1);
+}
+header nav a{font-weight:600}
+
+
+
+/* ───── BARRA DE BÚSQUEDA Y BOTÓN FILTROS ───── */
+#filtros{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  align-items:center;
+  justify-content:center;
+  margin-block:1.5rem;
+}
+#busqueda{
+  flex:1 1 12rem;
+  height:2.5rem;
+  padding:.5rem .75rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+}
+#abrir-filtros{
+  height:2.5rem;
+  padding:0 1rem;
+  border:1px solid #2d323a;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.4);
+  color:inherit;
+  cursor:pointer;
+}
+#abrir-filtros:hover{background:var(--fg-2);}
+
+
+
+/* ───── MODAL FILTROS ───── */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;                /* visible con .activo */
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+.modal.activo{display:flex}
+.modal-contenido{
+  background:var(--bg-2);
+  padding:2rem 1.5rem;
+  width:90%;
+  max-width:30rem;
+  border-radius:var(--radius);
+  display:grid;
+  gap:1rem;
+}
+.cerrar{
+  position:absolute;
+  top:.75rem;
+  right:1rem;
+  font-size:1.5rem;
+  color:var(--fg-1);
+  cursor:pointer;
+}
+.cerrar:hover{color:var(--fg-2)}
+.modal-contenido input,
+.modal-contenido select{
+  width:100%;
+  height:2.5rem;
+  padding:.5rem .75rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+}
+
+
+
+/* ───── LISTA DE ARTÍCULOS ───── */
+#lista-articulos{
+  display:grid;
+  gap:1.5rem;
+}
+@media(min-width:48rem){
+  #lista-articulos{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:80rem){
+  #lista-articulos{grid-template-columns:repeat(3,1fr)}
+}
+.article-card{
+  background:var(--bg-2);
+  border-radius:var(--radius);
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+}
+.article-card h3{color:var(--fg-2)}
+.article-card p{font-size:.9375rem}
+
+
+
+/* ───── PAGINACIÓN ───── */
+#paginacion{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  justify-content:center;
+  margin-block:2rem 3rem;
+}
+#paginacion button{
+  min-width:2.25rem;
+  height:2.25rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+  cursor:pointer;
+}
+#paginacion .activo,
+#paginacion button:hover{
+  background:var(--fg-2);
+  color:#13161c;
+  border-color:var(--fg-2);
+}
+
+
+
+
+/* ───── UTILIDADES ───── */
+.hide{display:none!important}
+
+
+/* Post más reciente a ancho completo */
+#lista-articulos > .card:first-child,
+#lista-articulos > .article-card:first-child,
+#lista-articulos > *:first-child{
+  grid-column:1 / -1 !important;   /* ocupa toda la fila */
+}
+
+
+/* ───── ESTILOS TARJETAS PLATZI ───── */
+
+:root{
+  --bg:#13161c;
+  --card-bg:#1e2229;
+  --card-bg-hover:rgb(255 255 255 / .05);
+  --text:#c4c8ce;
+  --accent:#0ae98a;
+  --radius:.75rem;
+  --dur:.3s;
+}
+
+*{box-sizing:border-box;margin:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"IBM Plex Sans",sans-serif;
+  line-height:1.5;
+  padding:2rem;
+}
+
+h1{
+  color:var(--accent);
+  margin-bottom:1rem;
+}
+
+/* ---------- tarjeta ---------- */
+.ui-card{
+  background:var(--card-bg);
+  border:1px solid rgb(204 221 255 / .1);
+  border-radius:var(--radius);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* fondo al pasar el cursor */
+.ui-card--clickable{cursor:pointer;}
+.ui-card--clickable:hover{background:var(--card-bg-hover);}
+
+/* escala sólo en la imagen */
+.ui-card--scale-on-hover [data-class="atomic-ui-card-hover-element"]{
+  transition:transform var(--dur) ease;
+}
+.ui-card--scale-on-hover:hover
+  [data-class="atomic-ui-card-hover-element"]{
+  transform:scale(1.05);
+}
+
+.ui-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.ui-card .content{padding:1rem;}
+.ui-card h3{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin-bottom:.25rem;
+}

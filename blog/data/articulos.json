@@ -11,7 +11,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo01.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -31,7 +31,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo02.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -51,7 +51,7 @@
       "ejemplo"
     ],
     "categoria": "Otra Categoría",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo03.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -71,7 +71,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo04.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -92,7 +92,7 @@
       "extra"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo05.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -112,7 +112,7 @@
       "ejemplo"
     ],
     "categoria": "Otra Categoría",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo01.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -132,7 +132,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo02.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -152,7 +152,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo03.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -172,7 +172,7 @@
       "ejemplo"
     ],
     "categoria": "Otra Categoría",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo04.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -193,7 +193,7 @@
       "extra"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo05.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -213,7 +213,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo01.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -233,7 +233,7 @@
       "ejemplo"
     ],
     "categoria": "Otra Categoría",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo02.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -253,7 +253,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo02.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -273,7 +273,7 @@
       "ejemplo"
     ],
     "categoria": "Categoría Demo",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo03.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",
@@ -294,7 +294,7 @@
       "extra"
     ],
     "categoria": "Otra Categoría",
-    "imagen": "assets/img/demo01.jpg",
+    "imagen": "blog/assets/img/demo04.jpeg",
     "fuentes": [
       {
         "titulo": "Fuente A",

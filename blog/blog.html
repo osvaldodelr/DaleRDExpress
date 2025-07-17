@@ -3,37 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | Blog Demo</title>
+  <title>Blog | ¡Dale! Express</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <header>
-  <h1>Blog Demo</h1>
+  <h1>¡Dale! Express</h1>
   <nav><a href="/index.html">Inicio</a></nav>
 </header>
 
-<section id="filtros">
-  <input type="search" id="busqueda" placeholder="Buscar…">
-  <button id="abrir-filtros">Filtros avanzados</button>
-</section>
-
-<!-- Modal de filtros -->
-<div id="modal-filtros" class="modal">
-  <div class="modal-contenido">
-    <span id="cerrar-modal" class="cerrar">&times;</span>
-    <h2>Filtros Avanzados</h2>
-    <input type="date" id="f-dia">
-    <input type="month" id="f-mes">
-    <select id="f-anio"></select>
-    <select id="f-cat"><option value="">Todas las categorías</option></select>
-    <div id="f-etiquetas"></div>
+<main class="container">
+  <section id="filtros">
+    <input type="search" id="busqueda" placeholder="Buscar…">
+    <button id="abrir-filtros">Filtros avanzados</button>
+  </section>
+  
+  <div>
+    <h1>Lo último del blog de ¡Dale! Express</h1>
   </div>
-</div>
-
-
-<main id="lista-articulos"></main>
-
-<nav id="paginacion"></nav>
+  
+  <!-- Modal de filtros -->
+  <div id="modal-filtros" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar-modal" class="cerrar">&times;</span>
+      <h2>Filtros Avanzados</h2>
+      <input type="date" id="f-dia">
+      <input type="month" id="f-mes">
+      <select id="f-anio">
+        <option value="">Todos los años</option>
+      </select>
+      <select id="f-cat">
+        <option value="">Todas las categorías</option>
+      </select>
+      <div id="f-etiquetas"></div>
+    </div>
+  </div>
+  
+  <main id="lista-articulos"></main>
+  
+  <nav id="paginacion"></nav>
+</main>
 
 <script src="assets/js/blog.js"></script>
 <script src="assets/js/filtros.js"></script>
