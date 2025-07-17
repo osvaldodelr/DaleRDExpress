@@ -337,3 +337,67 @@ header nav a{font-weight:600}
 #lista-articulos > *:first-child{
   grid-column:1 / -1 !important;   /* ocupa toda la fila */
 }
+
+
+/* ───── ESTILOS TARJETAS PLATZI ───── */
+
+:root{
+  --bg:#13161c;
+  --card-bg:#1e2229;
+  --card-bg-hover:rgb(255 255 255 / .05);
+  --text:#c4c8ce;
+  --accent:#0ae98a;
+  --radius:.75rem;
+  --dur:.3s;
+}
+
+*{box-sizing:border-box;margin:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"IBM Plex Sans",sans-serif;
+  line-height:1.5;
+  padding:2rem;
+}
+
+h1{
+  color:var(--accent);
+  margin-bottom:1rem;
+}
+
+/* ---------- tarjeta ---------- */
+.ui-card{
+  background:var(--card-bg);
+  border:1px solid rgb(204 221 255 / .1);
+  border-radius:var(--radius);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* fondo al pasar el cursor */
+.ui-card--clickable{cursor:pointer;}
+.ui-card--clickable:hover{background:var(--card-bg-hover);}
+
+/* escala sólo en la imagen */
+.ui-card--scale-on-hover [data-class="atomic-ui-card-hover-element"]{
+  transition:transform var(--dur) ease;
+}
+.ui-card--scale-on-hover:hover
+  [data-class="atomic-ui-card-hover-element"]{
+  transform:scale(1.05);
+}
+
+.ui-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.ui-card .content{padding:1rem;}
+.ui-card h3{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin-bottom:.25rem;
+}
