@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
   if(!id) return location.href='index.html';
-  fetch('../data/articulos.json')
+  fetch('data/articulos.json')
     .then(r=>r.json())
     .then(arr=>{
       const art = arr.find(a=>a.id===id);

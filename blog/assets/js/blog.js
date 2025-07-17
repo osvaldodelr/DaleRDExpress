@@ -4,7 +4,7 @@ let datosFiltrados = [];
 let paginaActual = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('../data/articulos.json')
+  fetch('data/articulos.json')
     .then(resp => resp.json())
     .then(json => {
       datos = json;
