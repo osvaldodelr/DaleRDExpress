@@ -29,7 +29,11 @@ body{
 }
 a{color:var(--fg-2);text-decoration:none}
 a:hover{text-decoration:underline}
-h1{font-size:1.75rem;color:var(--fg-2)}
+h2{color:var(--fg-2)}
+h3 {
+  color: var(--fg-2);
+  margin-bottom: 10px;
+}
 
 /* ───── CONTENEDOR GLOBAL Y PADDINGS RESPONSIVE ───── */
 header,#filtros,main,nav#paginacion{
@@ -321,6 +325,7 @@ header nav a{font-weight:600}
 }
 
 /* ───── PAGINACIÓN ───── */
+
 #paginacion{
   display:flex;
   flex-wrap:wrap;
@@ -336,12 +341,18 @@ header nav a{font-weight:600}
   background:rgba(0,0,0,.3);
   color:inherit;
   cursor:pointer;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #paginacion .activo,
 #paginacion button:hover{
   background:var(--fg-2);
   color:#13161c;
   border-color:var(--fg-2);
+}
+
+.nav-footer{
+  margin-top: 20px !important;
 }
 
 /* ───── UTILIDADES ───── */
@@ -414,4 +425,33 @@ header nav a{font-weight:600}
   }
 
   
+}
+
+
+
+
+/* ───── LOGO EN EL ENCABEZADO ───── */
+.header-blog{
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido del header */
+  margin-top: 20px;
+}
+
+.header-blog .logo {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo y el título */
+  text-decoration: none;
+}
+
+.header-blog .logo img {
+  max-height: 70px; /* Ajusta la altura máxima de la imagen */
+  margin-right: 10px; /* Espacio a la derecha de la imagen */
+}
+
+.header-blog .logo h2 {
+  text-decoration: none;
+  margin: 0; /* Elimina el margen del título */
+  color: var(--fg-2); /* Color del texto (ajústalo según tu diseño) */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 25px; /* Ajusta el tamaño de fuente según sea necesario */
 }
