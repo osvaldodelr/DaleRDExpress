@@ -276,10 +276,23 @@ section {
   max-height: 90px;
 }
 
-.social-links {
-  position: relative;
-  z-index: 997;
+body {
+  position: relative;  /* Crea un contexto de apilamiento para todo el body */
 }
+
+@media (min-width: 1080px) {
+  body .social-links {
+    position: relative;  /* Crea un contexto de apilamiento local dentro del body */
+    z-index: 994;  /* El z-index solo se aplica dentro del contexto de apilamiento de body */
+  }
+
+  body #filtros {
+    position: relative;  /* Necesario para que el z-index tenga efecto */
+    z-index: 995;  /* El z-index ahora tiene efecto */
+  }
+}
+
+
 
 .footer-info {
   padding-top: 10px;
