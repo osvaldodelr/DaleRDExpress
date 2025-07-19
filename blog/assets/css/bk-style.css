@@ -1,0 +1,457 @@
+/* ───── VARIABLES Y BASE ───── */
+:root{
+  --max-w:72rem;          /* 1152 px = 72 rem */
+  --pad-s:1rem;           /* 16 px  */
+  --pad-m:1.5rem;         /* 24 px  */
+  --bg-1:#13161c;         /* fondo principal */
+  --bg-2:#1b1e25;         /* fondo tarjetas / modal */
+  --fg-1:#c4c8ce;         /* texto principal */
+  --fg-2:#8cbd3f;         /* acento (h1 / enlaces) */
+  --radius:8px;
+  --font-main:"IBM Plex Sans",sans-serif;
+  
+  /* Variables para las nuevas tarjetas */
+  --bg:#13161c;
+  --card-bg:#1e2229;
+  --card-bg-hover:rgb(255 255 255 / .05);
+  --text:#c4c8ce;
+  --accent:#0ae98a;
+  --card-radius:.75rem;
+  --dur:.3s;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg-1);
+  color:var(--fg-1);
+  font-family:var(--font-main);
+  line-height:1.5;
+}
+a{color:var(--fg-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h2{color:var(--fg-2)}
+h3 {
+  color: var(--fg-2);
+  margin-bottom: 10px;
+}
+
+/* ───── CONTENEDOR GLOBAL Y PADDINGS RESPONSIVE ───── */
+header,#filtros,main,nav#paginacion{
+  width:100%;
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding-inline:var(--pad-s);
+}
+@media(min-width:48rem){       /* ≥768 px */
+  header,#filtros,main,nav#paginacion{padding-inline:var(--pad-m)}
+}
+@media(min-width:73.75rem){    /* ≥1180 px */
+  header,#filtros,main,nav#paginacion{padding-inline:0}
+}
+
+/* ───── ENCABEZADO ───── */
+header{
+  height:3.75rem;              /* 60 px */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--bg-1);
+}
+header nav a{font-weight:600}
+
+/* ───── BARRA DE BÚSQUEDA Y BOTÓN FILTROS ───── */
+#filtros{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  align-items:center;
+  justify-content:center;
+  margin-block:1.5rem;
+}
+#busqueda{
+  flex:1 1 12rem;
+  height:2.5rem;
+  padding:.5rem .75rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+}
+#abrir-filtros{
+  height:2.5rem;
+  padding:0 1rem;
+  border:1px solid #2d323a;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.4);
+  color:inherit;
+  cursor:pointer;
+}
+#abrir-filtros:hover{background:var(--fg-2);}
+
+
+/* ───── MODAL FILTROS ───── */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.6);
+  display:none;                /* visible con .activo */
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  padding:1rem;               /* Agrega padding para evitar que toque los bordes en móviles */
+}
+.modal.activo{display:flex}
+.modal-contenido{
+  position:relative;          /* Necesario para posicionar el botón cerrar correctamente */
+  background:var(--bg-2);
+  padding:2rem 1.5rem;
+  width:90%;
+  max-width:30rem;
+  border-radius:var(--radius);
+  display:grid;
+  gap:1rem;
+  color:var(--text);
+  margin:auto;                /* Centrado adicional por si acaso */
+}
+.cerrar{
+  position:absolute;
+  top:.75rem;
+  right:1rem;
+  font-size:1.5rem;
+  color:var(--fg-1);
+  cursor:pointer;
+}
+.cerrar:hover{color:var(--fg-2)}
+.modal-contenido input,
+.modal-contenido select{
+  width:100%;
+  height:2.5rem;
+  padding:.5rem .75rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+}
+
+
+
+
+/* ───── LISTA DE ARTÍCULOS CON NUEVOS ESTILOS ───── */
+#lista-articulos{
+  display:grid;
+  gap:1.5rem;
+}
+@media(min-width:48rem){
+  #lista-articulos{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:80rem){
+  #lista-articulos{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ───── NUEVOS ESTILOS PARA TARJETAS ───── */
+.ui-card{
+  background:var(--card-bg);
+  border:1px solid rgb(204 221 255 / .1);
+  border-radius:var(--card-radius);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:background var(--dur) ease;
+}
+
+/* fondo al pasar el cursor */
+.ui-card--clickable{cursor:pointer;}
+.ui-card--clickable:hover{background:var(--card-bg-hover);}
+
+/* escala sólo en la imagen */
+.ui-card--scale-on-hover [data-class="atomic-ui-card-hover-element"]{
+  transition:transform var(--dur) ease;
+}
+.ui-card--scale-on-hover:hover [data-class="atomic-ui-card-hover-element"]{
+  transform:scale(1.05);
+}
+
+.ui-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.ui-card .content{
+  padding:1rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.ui-card h3{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin-bottom:.25rem;
+}
+
+.ui-card h2{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin-bottom:.5rem;
+}
+
+.ui-card h2 a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.ui-card h2 a:hover{
+  text-decoration:underline;
+}
+
+.ui-card p{
+  font-size:.9375rem;
+  flex:1;
+  margin-bottom:.5rem;
+}
+
+.ui-card small{
+  color:rgba(196, 200, 206, 0.8);
+  font-size:.875rem;
+}
+
+/* Compatibilidad con estilos existentes */
+.card {
+  background:var(--card-bg);
+  border:1px solid rgb(204 221 255 / .1);
+  border-radius:var(--card-radius);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:background var(--dur) ease;
+  cursor:pointer;
+}
+
+.card:hover{
+  background:var(--card-bg-hover);
+}
+
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  transition:transform var(--dur) ease;
+}
+
+.card:hover img {
+  transform:scale(1.05);
+}
+
+.card h2 {
+  color:var(--accent);
+  font-size:1.1rem;
+  margin:.5rem 1rem .25rem 1rem;
+}
+
+.card h2 a {
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.card h2 a:hover {
+  text-decoration:underline;
+}
+
+.card p {
+  flex:1;
+  margin:0 1rem .5rem 1rem;
+  font-size:.9375rem;
+}
+
+.card small {
+  color:rgba(196, 200, 206, 0.8);
+  font-size:.875rem;
+  margin:0 1rem 1rem 1rem;
+}
+
+/* Estilos para tarjetas de artículos */
+.article-card{
+  background:var(--card-bg);
+  border:1px solid rgb(204 221 255 / .1);
+  border-radius:var(--card-radius);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:background var(--dur) ease;
+  cursor:pointer;
+}
+
+.article-card:hover{
+  background:var(--card-bg-hover);
+}
+
+.article-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  transition:transform var(--dur) ease;
+}
+
+.article-card:hover img{
+  transform:scale(1.05);
+}
+
+.article-card .content{
+  padding:1rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.article-card h3{
+  color:var(--accent);
+  font-size:1.1rem;
+  margin-bottom:.25rem;
+}
+
+.article-card p{
+  font-size:.9375rem;
+  flex:1;
+  margin-bottom:.5rem;
+}
+
+.article-card small{
+  color:rgba(196, 200, 206, 0.8);
+  font-size:.875rem;
+}
+
+/* ───── PAGINACIÓN ───── */
+
+#paginacion{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  justify-content:center;
+  margin-block:2rem 3rem;
+}
+#paginacion button{
+  min-width:2.25rem;
+  height:2.25rem;
+  border:1px solid #404650;
+  border-radius:var(--radius);
+  background:rgba(0,0,0,.3);
+  color:inherit;
+  cursor:pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#paginacion .activo,
+#paginacion button:hover{
+  background:var(--fg-2);
+  color:#13161c;
+  border-color:var(--fg-2);
+}
+
+.nav-footer{
+  margin-top: 20px !important;
+}
+
+/* ───── UTILIDADES ───── */
+.hide{display:none!important}
+
+/* Post más reciente a ancho completo */
+#lista-articulos > .card:first-child,
+#lista-articulos > .article-card:first-child,
+#lista-articulos > .ui-card:first-child,
+#lista-articulos > *:first-child{
+  grid-column:1 / -1 !important;   /* ocupa toda la fila */
+}
+
+/* Filtros de etiquetas */
+#filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--bg-1);
+}
+
+#f-etiquetas button {
+  margin: 0 0.25rem 0.25rem 0;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  background: var(--bg-2);
+  color: var(--fg-1);
+  cursor: pointer;
+  transition: all var(--dur) ease;
+}
+
+#f-etiquetas button:hover {
+  background: var(--card-bg-hover);
+}
+
+#f-etiquetas button.activo {
+  background: var(--accent);
+  color: var(--bg-1);
+}
+
+@media(prefers-color-scheme:dark) {
+  body {
+    background: var(--bg-1);
+    color: var(--fg-1);
+  }
+
+  header,
+  footer {
+    background: var(--bg-1);
+  }
+
+  .card,
+  .ui-card,
+  .article-card {
+    background: var(--card-bg);
+    border: 1px solid rgb(204 221 255 / .1);
+  }
+
+  .card:hover,
+  .ui-card:hover,
+  .article-card:hover {
+    background: var(--card-bg-hover);
+  }
+
+  #filtros {
+    background: var(--bg-1);
+  }
+
+  
+}
+
+
+
+
+/* ───── LOGO EN EL ENCABEZADO ───── */
+.header-blog{
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido del header */
+  margin-top: 20px;
+}
+
+.header-blog .logo {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo y el título */
+  text-decoration: none;
+}
+
+.header-blog .logo img {
+  max-height: 70px; /* Ajusta la altura máxima de la imagen */
+  margin-right: 10px; /* Espacio a la derecha de la imagen */
+}
+
+.header-blog .logo h2 {
+  text-decoration: none;
+  margin: 0; /* Elimina el margen del título */
+  color: var(--fg-2); /* Color del texto (ajústalo según tu diseño) */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  font-size: 25px; /* Ajusta el tamaño de fuente según sea necesario */
+}

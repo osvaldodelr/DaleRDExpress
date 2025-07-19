@@ -80,9 +80,14 @@ function renderizarLista(arr){
     card.addEventListener('click', () => {
       window.location.href = `blog/articulo.html?id=${encodeURIComponent(a.id)}`;
     });
-    
+
+    // Detectar si la imagen es externa o local
+    const imagenSrc = (a.imagen.startsWith('http://') || a.imagen.startsWith('https://'))
+      ? a.imagen
+      : `../${a.imagen}`;
+
     card.innerHTML = `
-      <img src="../${a.imagen}" alt="${a.titulo}" data-class="atomic-ui-card-hover-element">
+      <img src="${imagenSrc}" alt="${a.titulo}" data-class="atomic-ui-card-hover-element">
       <div class="content">
         <h2><a href="blog/articulo.html?id=${encodeURIComponent(a.id)}">${a.titulo}</a></h2>
         <p>${a.resumen}</p>

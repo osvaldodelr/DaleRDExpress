@@ -1,56 +1,261 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog | ¡Dale! Express</title>
-  <link rel="stylesheet" href="blog/assets/css/style.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="index, follow">
+
+  <!-- META ETIQUETAS PARA GOOGLE -->
+  <meta name="description"
+    content="Transporte de cargas pesadas, grúas, camiones de agua y mudanzas en Santo Domingo. Puntualidad, calidad y eficiencia garantizada.">
+  <meta name="keywords"
+    content="transporte de cargas, grúas de elevación, grúas plataforma, camiones de agua, mudanzas Santo Domingo, acarreos, furgones de carga">
+
+  <meta property="og:title" content="¡Dale! Express | Transporte de cargas pesadas, soluciones ligeras.">
+  <meta property="og:description" content="Camiones de agua, grúas, mudanzas, acarreos y más. Servicio rápido y eficiente.">
+  <meta property="og:image" content="https://transporte.dalerd.com/assets/img/logo.svg">
+  <meta property="og:url" content="https://transporte.dalerd.com/">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQWGW69Q');</script>
+  <!-- End Google Tag Manager -->
+  
+  <!-- TÍTULO -->
+  <title>¡Dale! Express | Transporte de mercancías, grúas y camión de agua a domicilio</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.svg" sizes="32x32" type="image/svg">
+  <link href="assets/img/apple-touch-icon.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="blog/assets/css/stylesecundary.css" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "¡Dale! Express",
+    "image": "https://transporte.dalerd.com/assets/img/logo.svg",
+    "url": "https://transporte.dalerd.com/",
+    "telephone": "+18094330002",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Albert Thomas, DN.",
+      "addressLocality": "Santo Domingo",
+      "addressCountry": "DO"
+    },
+    "description": "Transporte de cargas, grúas, camiones de agua y mudanzas en Santo Domingo."
+  }
+  </script>
+
 </head>
 
 <body>
-  <header class="header-blog">
-    <a href="index.html" class="logo d-flex align-items-center">
-      <img src="assets/img/logo.svg" alt="">
-      <h2>¡Dale! Express</h2>
-    </a>
-    <nav><a href="index.html">Inicio</a></nav>
-  </header>
 
-  <main class="container">
-    <section id="filtros">
-      <input type="search" id="busqueda" placeholder="Buscar…">
-      <button id="abrir-filtros">Filtros avanzados</button>
-    </section>
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQWGW69Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <div>
-      <h3>Lo último del blog de ¡Dale! Express</h3>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.svg" alt="">
+        <h1>¡Dale! Express</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <section id="filtros">
+            <input type="search" id="busqueda" placeholder="Buscar…">
+            <button id="abrir-filtros">Filtros avanzados</button>
+          </section>
+          
+          <!-- Modal de filtros -->
+          <div id="modal-filtros" class="modal">
+            <div class="modal-contenido">
+              <span id="cerrar-modal" class="cerrar">&times;</span>
+              <h2>Filtros Avanzados</h2>
+              <input type="date" id="f-dia" placeholder="Fecha">
+              <input type="month" id="f-mes" placeholder="Meses">
+              <select id="f-anio">
+                <option value="">Todos los años</option>
+              </select>
+              <select id="f-cat">
+                <option value="">Todas las categorías</option>
+              </select>
+              <div id="f-etiquetas"></div>
+            </div>
+          </div>
+          <li><a id="get-a-quote" class="get-a-quote" href="https://wa.me/18094330002" target="_blank"> <i
+                class="space bi bi-whatsapp" style="font-size: 1.5rem;"></i> ¡Cotizar ahora!</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
     </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
 
-    <!-- Modal de filtros -->
-    <div id="modal-filtros" class="modal">
-      <div class="modal-contenido">
-        <span id="cerrar-modal" class="cerrar">&times;</span>
-        <h2>Filtros Avanzados</h2>
-        <input type="date" id="f-dia" placeholder="Fecha">
-        <input type="month" id="f-mes" placeholder="Meses">
-        <select id="f-anio">
-          <option value="">Todos los años</option>
-        </select>
-        <select id="f-cat">
-          <option value="">Todas las categorías</option>
-        </select>
-        <div id="f-etiquetas"></div>
+  
+
+  <main id="main">
+  
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <!-- <h2>Contactos</h2> -->
+              <div class="social-links d-flex justify-content-center mt-4">
+                <a href="https://wa.me/18094330002" target="_blank" class="whatsapp mx-2"><i
+                    class="bi bi-whatsapp fs-1"></i></a>
+                <a href="https://www.facebook.com/share/19G3y6KDdG" target="_blank" class="facebook mx-2"><i
+                    class="bi bi-facebook fs-1"></i></a>
+                <a href="https://instagram.com/DaleRD.com_" target="_blank" class="instagram mx-2"><i
+                    class="bi bi-instagram fs-1"></i></a>
+                <a href="tel:+18094330002" target="_blank" class="telephone-fill mx-2"><i
+                    class="bi bi-telephone-fill fs-1"></i></a>
+              </div>
+              <p>
+                <strong>Transporte de cargas pesadas, soluciones ligeras...</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <!-- <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li>Services</li>
+            </ol>
+          </div> -->
+      </nav>
+    </div><!-- End Breadcrumbs -->
+  
+    <!-- ======= Services Section ======= -->
+    <section id="service" class="services pt-0">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <span>Lo último del blog ¡Dale! Express</span>
+          <h2>Lo último del blog ¡Dale! Express</h2>
+        </div>
+  
+        <div class="row gy-4">
+          <main id="lista-articulos"></main>
+          <nav class="nav-footer" id="paginacion"></nav>
+        </div>
+  
+      </div>
+    </section><!-- End Services Section -->
+  
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>¡Dale! Express</span>
+          </a>
+          <p>Transporte de cargas pesadas, soluciones ligeras...</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://wa.me/18094330002" target="_blank" class="whatsapp"><i class="bi bi-whatsapp fs-1"></i></a>
+            <a href="https://www.facebook.com/share/19G3y6KDdG" target="_blank" class="facebook"><i
+                class="bi bi-facebook fs-1"></i></a>
+            <a href="https://instagram.com/DaleRD.com_" target="_blank" class="instagram"><i
+                class="bi bi-instagram fs-1"></i></a>
+            <a href="tel:+18095403304" target="_blank" class="telephone-fill"><i
+                class="bi bi-telephone-fill fs-1"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <!-- <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contactos</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contactos</h4>
+          <p>
+            Av. Albert Thomas, DN.<br>
+            Santo Domingo,<br>
+            Republica Dominicana.<br><br>
+            <strong>Phone:</strong> +1 (809) 433-0002<br>
+            <strong>WhatsApp:</strong><a href="https://wa.me/18094330002" target="_blank" class="nolink"> +1 (809)
+              433-0002</a><br>
+            <strong>Email:</strong> cuentas.estrategicas@dalerd.com<br>
+          </p>
+
+        </div>
+
       </div>
     </div>
 
-    <main id="lista-articulos"></main>
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>¡Dale! Express</span></strong>. All Rights Reserved 2025
+      </div>
+    </div>
 
-    <nav class="nav-footer" id="paginacion"></nav>
-  </main>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
 
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
   <script src="blog/assets/js/blog.js"></script>
   <script src="blog/assets/js/filtros.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

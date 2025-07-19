@@ -23,44 +23,13 @@
   /* Variables para las nuevas tarjetas */
   --bg:var(--color-1);
   --card-bg:var(--color-1);
-  --card-bg-hover:var(--color-3);
+  --card-bg-hover:var(--color-2);
   --text:var(--color-7);
   --accent:var(--color-4);
   --card-radius:.75rem;
   --dur:.3s;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  background:var(--bg-1);
-  color:var(--fg-1);
-  font-family:var(--font-main);
-  line-height:1.5;
-}
-a{color:var(--fg-2);text-decoration:none}
-a:hover{text-decoration:underline}
-h2,h3{color:var(--fg-2)}
-h3{margin-top:10px}
-
-/* ───── CONTENEDOR GLOBAL Y PADDINGS RESPONSIVE ───── */
-header,#filtros,main,nav#paginacion{
-  width:100%;
-  max-width:var(--max-w);
-  margin:0 auto;
-  padding-inline:var(--pad-s);
-}
-@media(min-width:48rem){header,#filtros,main,nav#paginacion{padding-inline:var(--pad-m)}}
-@media(min-width:73.75rem){header,#filtros,main,nav#paginacion{padding-inline:0}}
-
-/* ───── ENCABEZADO ───── */
-header{
-  height:3.75rem;              /* 60 px */
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  background:var(--color-1);
-}
-header nav a{font-weight:600}
 
 /* ───── BARRA DE BÚSQUEDA Y BOTÓN FILTROS ───── */
 #filtros{
@@ -71,7 +40,7 @@ header nav a{font-weight:600}
   justify-content:center;
   margin-block:1.5rem;
   padding:1rem;
-  background:var(--color-1);
+  background:var(--color-);
 }
 #busqueda{
   flex:1 1 12rem;
@@ -79,7 +48,7 @@ header nav a{font-weight:600}
   padding:.5rem .75rem;
   border:1px solid #404650;
   border-radius:var(--radius);
-  background:var(--color-1);
+  background:var(--color-8);
   color:inherit;
 }
 #abrir-filtros{
@@ -87,11 +56,11 @@ header nav a{font-weight:600}
   padding:0 1rem;
   border:1px solid #2d323a;
   border-radius:var(--radius);
-  background:var(--color-2);
-  color:inherit;
+  background:var(--color-4);
+  color:var(--color-7);
   cursor:pointer;
 }
-#abrir-filtros:hover{background:var(--fg-2); color: var(--color-1);}
+#abrir-filtros:hover{background:var(--color-5); color: var(--color-1);}
 
 /* ───── MODAL FILTROS ───── */
 .modal{
@@ -103,7 +72,7 @@ header nav a{font-weight:600}
   display:none;                /* visible con .activo */
   align-items:center;
   justify-content:center;
-  z-index:1000;
+  z-index:9988;
   padding:1rem;               /* evita contacto con bordes en móviles */
 }
 .modal.activo{display:flex}
@@ -147,9 +116,38 @@ header nav a{font-weight:600}
 @media(min-width:48rem){#lista-articulos{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:80rem){#lista-articulos{grid-template-columns:repeat(3,1fr)}}
 
+/* ───── POST DESTACADO TARJETAS DE ARTÍCULO ───── */
+#lista-articulos > .ui-card:first-child,
+#lista-articulos > *:first-child{
+  grid-column:1 / -1 !important;   /* ocupa toda la fila */
+}
+
+#lista-articulos > .ui-card:first-child {
+  grid-column: 1 / -1 !important; /* Ocupa toda la fila */
+  flex-direction: row-reverse;    /* Imagen a la izquierda, texto a la derecha */
+  gap: 1.5rem;
+  min-height: 300px;              /* Reduce el alto mínimo */
+  height: 300px;                  /* Fija el alto */
+  background: var(--card-bg-hover);
+}
+
+#lista-articulos > .ui-card:first-child img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#lista-articulos > .ui-card:first-child .content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 /* ───── TARJETAS DE ARTÍCULO ───── */
 .ui-card{
-  background:var(--card-bg);
+  background:var(--color-secondary);
   border:1px solid rgb(204 221 255 / .1);
   border-radius:var(--card-radius);
   display:flex;
@@ -189,11 +187,15 @@ header nav a{font-weight:600}
   font-size:.9375rem;
   flex:1;
   margin-bottom:.5rem;
+  color:var(--color-7);
 }
 .ui-card small{
-  color:rgba(196, 200, 206, 0.8);
+  color:var(--color-8);
   font-size:.875rem;
 }
+
+
+
 
 /* ───── PAGINACIÓN ───── */
 #paginacion{
@@ -201,32 +203,29 @@ header nav a{font-weight:600}
   flex-wrap:wrap;
   gap:.5rem;
   justify-content:center;
-  margin-block:2rem 3rem;
+  /*margin-block:2rem 3rem;*/
+  margin-bottom: 15px;
 }
 #paginacion button{
   min-width:2.25rem;
   height:2.25rem;
   border:1px solid #404650;
   border-radius:var(--radius);
-  background:var(--color-2);
-  color:inherit;
+  background:var(--color-4);
+  color:var(--color-7);
   cursor:pointer;
   padding-inline:5px;
 }
 #paginacion .activo,
 #paginacion button:hover{
-  background:var(--fg-2);
-  color:#13161c;
+  background:var(--color-5);
+  color:var(--color-1);
   border-color:var(--fg-2);
 }
 
 .nav-footer{margin-top:20px!important}
 
-/* ───── POST DESTACADO ───── */
-#lista-articulos > .ui-card:first-child,
-#lista-articulos > *:first-child{
-  grid-column:1 / -1 !important;   /* ocupa toda la fila */
-}
+
 
 /* ───── ETIQUETAS ───── */
 #f-etiquetas button{
@@ -245,31 +244,47 @@ header nav a{font-weight:600}
   color:var(--color-1);
 }
 
-/* ───── MODO OSCURO (respeta preferencia del SO) ───── */
-@media(prefers-color-scheme:dark){
-  body,header,footer{background:var(--color-1);color:var(--fg-1);}
-  .ui-card{background:var(--card-bg);border:1px solid rgb(204 221 255 / .1);}
-  .ui-card:hover{background:var(--card-bg-hover);}
+
+
+
+
+
+
+
+
+
+section {
+  padding: 0px;
 }
 
-/* ───── LOGO EN EL ENCABEZADO ───── */
-.header-blog{
-  display:flex;
-  align-items:center;
-  margin-top:20px;
+.breadcrumbs .page-header:before {
+  content: "";
+  background-color: rgba(14, 29, 52, 0.8);
+  position: absolute;
+  inset: 0;
+  max-height: 260px;;
 }
-.header-blog .logo{
-  display:flex;
-  align-items:center;
-  text-decoration:none;
+
+.page-header{
+  max-height: 260px;;
 }
-.header-blog .logo img{
-  max-height:70px;
-  margin-right:10px;
+
+.header.sticked {
+  background: rgba(14, 29, 52, 0.9);
+  padding: 0px 0;
+  box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
+  max-height: 90px;
 }
-.header-blog .logo h2{
-  margin:0;
-  color:var(--fg-2);
-  white-space:nowrap;
-  font-size:25px;
+
+.social-links {
+  position: relative;
+  z-index: 997;
+}
+
+.footer-info {
+  padding-top: 10px;
+}
+.copyright{
+  padding: 0;
+  margin: 0;
 }

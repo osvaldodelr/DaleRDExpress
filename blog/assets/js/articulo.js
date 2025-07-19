@@ -15,8 +15,14 @@ function renderizar(a){
   document.title = a.titulo + ' | Blog Demo';
   document.getElementById('titulo-articulo').textContent = a.titulo;
   const cont = document.getElementById('contenido-articulo');
+
+  // Detectar si la imagen es externa o local
+  const imagenSrc = (a.imagen.startsWith('http://') || a.imagen.startsWith('https://'))
+    ? a.imagen
+    : `../${a.imagen}`;
+
   cont.innerHTML = `
-    <img src="../${a.imagen}" alt="" style="max-width:100%;height:auto">
+    <img src="${imagenSrc}" alt="" style="max-width:100%;height:auto">
     <p><small>${a.fecha} · ${a.autor}</small></p>
     ${a.contenido}
     <p><strong>Categoría:</strong> ${a.categoria}</p>
@@ -31,7 +37,9 @@ function renderizar(a){
     "headline": a.titulo,
     "datePublished": a.fecha,
     "author": {"@type":"Person","name": a.autor},
-    "image": location.origin + '/' + a.imagen,
+    "image": (a.imagen.startsWith('http://') || a.imagen.startsWith('https://'))
+      ? a.imagen
+      : location.origin + '/' + a.imagen,
     "articleBody": a.contenido.replace(/<[^>]+>/g,''),
     "publisher": {"@type":"Organization","name":"Blog Demo"}
   };
