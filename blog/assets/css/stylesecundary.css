@@ -276,10 +276,6 @@ section {
   max-height: 90px;
 }
 
-body {
-  position: relative;  /* Crea un contexto de apilamiento para todo el body */
-}
-
 @media (min-width: 1080px) {
   body .social-links {
     position: relative;  /* Crea un contexto de apilamiento local dentro del body */
