@@ -277,6 +277,11 @@ section {
   box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
   max-height: 90px;
 }
+.header {
+  transition: all 0.5s;
+  z-index: 990;
+  /*padding: 30px 0;*/
+}
 
 @media (min-width: 1080px) {
   body .social-links {
